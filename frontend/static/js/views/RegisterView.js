@@ -1,0 +1,34 @@
+import AbstractView from "./AbstractView.js";
+
+export default class extends AbstractView {
+    constructor() {
+        super();
+        this.setTitle("Register");
+    }
+
+    async getHtml() {
+        return `
+        <div class="login-bg">
+            <div class="register-container">
+                <h1>Sign Up</h1>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Create a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Write an email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    <button type="submit" class="register-button">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="/login" data-link>Log in here</a></p>
+            </div>
+        </div>
+        `;
+    }
+}

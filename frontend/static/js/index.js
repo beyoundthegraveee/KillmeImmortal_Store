@@ -1,6 +1,8 @@
 
 import DashBoard from "./views/DashBoard.js";
 import AboutView from "./views/AboutView.js";
+import SignInView from "./views/SignInView.js";
+import RegisterView from "./views/RegisterView.js";
 
 
 const navigateTo = url =>{
@@ -14,8 +16,10 @@ const navigateTo = url =>{
 const router = async() => {
     const routes = [
         {path: "/", view: DashBoard},
-        // {path: "/home", view: () => HomeView },
-        {path: "/about", view: AboutView}
+        {path: "/home", view: DashBoard },
+        {path: "/about", view: AboutView},
+        {path: "/login", view: SignInView},
+        {path: "/register", view: RegisterView}
         // {path: "/t-shirts-and-tops", view: () => TShirtsView },
         // {path: "/hoodies", view: () => HoodiesView },
         // {path: "/outerwear", view: () => OuterwearView },

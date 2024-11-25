@@ -1,6 +1,6 @@
 const loginForm = document.getElementById("login-form");
-const userName = document.getElementById('username-input');
-const userPassword = document.getElementById('password-input');
+const userName = document.getElementById('username');
+const userPassword = document.getElementById('password');
 const login_error = document.getElementById('username-error');
 const password_error = document.getElementById('password-error');
 
