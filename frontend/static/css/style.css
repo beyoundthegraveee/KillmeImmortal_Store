@@ -256,7 +256,7 @@ footer p {
 }
 
 .login-container {
-    max-width: 500px;
+    width: 500px;
     margin: 120px auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -316,7 +316,7 @@ footer p {
 }
 
 .register-container {
-    max-width: 400px;
+    width: 500px;
     margin: 100px auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -385,4 +385,20 @@ footer p {
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.9;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    visibility: hidden;
+    height: 1rem;
+}
+
+.incorrect input {
+    border-color: red;
+}
+
+.incorrect .error-message {
+    visibility: visible;
 }
