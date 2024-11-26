@@ -11,7 +11,6 @@ loginForm.addEventListener('submit', e => {
 
     let passwordErrors = validatePassword(userPassword.value);
 
-
     if(loginErrors.length > 0){
         e.preventDefault();
         login_error.innerText  = loginErrors.join(". ")

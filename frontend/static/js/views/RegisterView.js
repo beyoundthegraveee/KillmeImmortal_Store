@@ -8,8 +8,7 @@ export default class extends AbstractView {
 
     async getHtml() {
         return `
-        <script type="module" src="static/js/validationRegister.js" defer></script>
-        <div class="login-bg">
+        <div class="register-bg">
             <div class="register-container">
                 <h1>Sign Up</h1>
                 <form id="register-form">
