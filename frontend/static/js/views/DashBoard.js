@@ -34,7 +34,7 @@ export default class extends AbstractView {
                 <button>Add to Cart</button>
             </div>
             <div class="product-card">
-                <img src="/static/products_img/4.jpg" alt="Product 4">
+                <img src="/static/products_img/t-shirt3.jpg" alt="Product 4">
                 <h3>Product 4</h3>
                 <p>$49.99</p>
                 <button>Add to Cart</button>
@@ -43,6 +43,30 @@ export default class extends AbstractView {
                 <img src="/static/products_img/toyota.jpg" alt="Product 5">
                 <h3>Product 5</h3>
                 <p>$12.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/static/products_img/t-shirt2.jpg" alt="Product 6">
+                <h3>Product 6</h3>
+                <p>$13.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/static/products_img/pants1.jpg" alt="Product 7">
+                <h3>Product 7</h3>
+                <p>$13.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/static/products_img/pants2.jpg" alt="Product 8">
+                <h3>Product 8</h3>
+                <p>$13.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="/static/products_img/pants3.jpg" alt="Product 9">
+                <h3>Product 9</h3>
+                <p>$13.99</p>
                 <button>Add to Cart</button>
             </div>
         </div>
