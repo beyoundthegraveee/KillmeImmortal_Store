@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () =>{
     } else if (message === 'loggedin') {
         alert('You logged in successfully!');
     }
-
     document.body.addEventListener("click", e => {
         if(e.target.matches("[data-link]")){
             e.preventDefault();

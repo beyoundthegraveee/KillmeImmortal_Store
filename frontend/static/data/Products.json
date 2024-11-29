@@ -134,6 +134,30 @@
         "category": "accessories",
         "image": "/static/products_img/pandoras2.jpg",
         "price": "$166.99"
+    },
+    {
+        "id": 18,
+        "name": "Killmmortal coach",
+        "description": "Classic coaches.",
+        "category": "outerwear",
+        "image": "/static/products_img/outerwear1.jpg",
+        "price": "$89.99"
+    },
+    {
+        "id": 19,
+        "name": "Killmmortal coach",
+        "description": "Classic coaches.",
+        "category": "outerwear",
+        "image": "/static/products_img/outerwear2.jpg",
+        "price": "$88.99"
+    },
+    {
+        "id": 20,
+        "name": "Killmmortal coach",
+        "description": "Classic coaches.",
+        "category": "outerwear",
+        "image": "/static/products_img/outerwear3.jpg",
+        "price": "$99.99"
     }
 
 ]
