@@ -7,6 +7,7 @@ import OuterwearView from "../views/OuterwearView.js";
 import HoodiesView from "../views/HoodiesView.js";
 import BottomsView from "../views/BottomsView.js";
 import AccessoriesView from "../views/AccessoriesView.js";
+import CartView from "../views/CartView.js";
 
 const navigateTo = url =>{
     history.pushState(null, null,url);
@@ -25,7 +26,8 @@ const router = async() => {
         {path: "/hoodies", view: HoodiesView },
         {path: "/outerwear", view: OuterwearView },
         {path: "/bottoms", view: BottomsView},
-        {path: "/accessories", view: AccessoriesView}
+        {path: "/accessories", view: AccessoriesView},
+        {path: "/cart", view: CartView}
     ];
 
 
