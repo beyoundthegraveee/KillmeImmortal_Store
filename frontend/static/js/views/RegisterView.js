@@ -1,6 +1,7 @@
 import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
+    
     constructor() {
         super();
         this.setTitle("Register");
@@ -11,7 +12,7 @@ export default class extends AbstractView {
         <div class="register-bg">
             <div class="register-container">
                 <h1>Sign Up</h1>
-                <form id="register-form">
+                <form id="register-form" action="/api/register" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Create a username" required>
@@ -32,6 +33,8 @@ export default class extends AbstractView {
                 <p>Already have an account? <a href="/login" data-link>Log in here</a></p>
             </div>
         </div>
-        `;
-    }
+    `;
+}
+
+    
 }

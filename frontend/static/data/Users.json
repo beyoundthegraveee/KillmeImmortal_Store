@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "username": "bogdan",
+    "email": "bogdan@example.com",
+    "password": "$2b$10$uFPXfQXER7xQbFhA6eKuwu/hUwF5uWx0TMOwI59j7I7hFOkFSezyi"
+  },
+  {
+    "id": 2,
+    "username": "jane_smith",
+    "email": "jane.smith@example.com",
+    "password": "$2b$10$9nZzK0uK2PqZKFsH6PQx/.dlBOEqFfP4zF9vPev7S0y2XkQnLE5vG"
+  },
+  {
+    "id": 3,
+    "username": "mike_brown",
+    "email": "mike.brown@example.com",
+    "password": "$2b$10$czLf5p8.Ez6DhtHqvVjZpuKh3DE/XLzMNvUy4D12MbFcQMXpLo.Sy"
+  },
+  {
+    "id": 4,
+    "username": "lucy_wilson",
+    "email": "lucy.wilson@example.com",
+    "password": "$2b$10$Xnxm9FPhxDjb1TkWfYxsz3Bh5ngRg9Bohg0jXt6KAGm7cmgKmLToC"
+  },
+  {
+    "id": 5,
+    "username": "david_jones",
+    "email": "david.jones@example.com",
+    "password": "$2b$10$Mwl5fNvU79FLmj4gPlTwN9gKJSy8yQ3rlyY4Y5/lD9UunS5FA5t7y"
+  },
+  {
+    "id": 6,
+    "username": "username",
+    "email": "s24911@pjwstk.edu.pl",
+    "password": "$2b$10$TxY7Crppcr0JSASpbIBCVeNOP9nj7nMCRHbOGCPokE97UY0kdrKpS"
+  },
+  {
+    "id": 7,
+    "username": "username213",
+    "email": "kkurzau@gmail.com",
+    "password": "$2b$10$uTveC3Paf1MJDlOX30f4uu6nIwpufAKEa0QAwAwuOTkdpEyoPNJgm"
+  },
+  {
+    "id": 8,
+    "username": "username111",
+    "email": "exp@gmail.com",
+    "password": "$2b$10$vSFkztfpwgCcrL6PUc7BbOW.3wkhpW/wpde7HNyQwDO49RLBr7QQG"
+  }
+]

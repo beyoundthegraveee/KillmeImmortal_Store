@@ -8,11 +8,10 @@ export default class extends AbstractView {
 
     async getHtml(){
         return `
-        <script type="module" src="static/js/validationLogin.js" defer></script>
         <div class="login-bg">
             <div class="login-container">
                 <h1>Login</h1>
-                <form id="login-form">
+                <form id="login-form" action="/api/login" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your username" required>

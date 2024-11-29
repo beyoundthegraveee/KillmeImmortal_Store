@@ -1,0 +1,139 @@
+[
+    {
+      "id": 1,
+      "name": "Hoddie ",
+      "description": "Comfortable hoodie.",
+      "category": "hoodies",
+      "image": "/static/products_img/hoodie.jpg",
+      "price": "$39.99"
+    },
+    {
+      "id": 2,
+      "name": "Longsleeve",
+      "description": "Warm Longsleeve.",
+      "category": "t-shirts_tops",
+      "image": "/static/products_img/long.jpg",
+      "price": "$29.99"
+    },
+    {
+      "id": 3,
+      "name": "Killmmortal T-shirt",
+      "description": "Classic t-shirt.",
+      "category": "t-shirts_tops",
+      "image": "/static/products_img/t-shirt1.jpg",
+      "price": "$19.99"
+    },
+    {
+      "id": 4,
+      "name": "Killmmortal T-shirt",
+      "description": "Classic t-shirt.",
+      "category": "t-shirts_tops",
+      "image": "/static/products_img/t-shirt2.jpg",
+      "price": "$25.99"
+    },
+    {
+        "id": 5,
+        "name": "Killmmortal T-shirt",
+        "description": "Classic t-shirt.",
+        "category": "t-shirts_tops",
+        "image": "/static/products_img/t-shirt3.jpg",
+        "price": "$19.99"
+    },
+    {
+        "id": 6,
+        "name": "Killmmortal pants",
+        "description": "Classic pants",
+        "category": "bottoms",
+        "image": "/static/products_img/pants1.jpg",
+        "price": "$32.99"
+    },
+    {
+        "id": 7,
+        "name": "Killmmortal pants",
+        "description": "Classic pants",
+        "category": "bottoms",
+        "image": "/static/products_img/pants2.jpg",
+        "price": "$32.99"
+    },
+    {
+        "id": 8,
+        "name": "Killmmortal pants",
+        "description": "Classic pants",
+        "category": "bottoms",
+        "image": "/static/products_img/pants3.jpg",
+        "price": "$35.99"
+    },
+    {
+        "id": 9,
+        "name": "Killmmortal T-shirt",
+        "description": "Classic t-shirt.",
+        "category": "t-shirts_tops",
+        "image": "/static/products_img/t-shirt4.jpg",
+        "price": "$25.99"
+    },
+    {
+        "id": 10,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood.jpg",
+        "price": "$209.99"
+    },
+    {
+        "id": 11,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood1.jpg",
+        "price": "$219.99"
+    },
+    {
+        "id": 12,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood2.jpg",
+        "price": "$219.99"
+    },
+    {
+        "id": 13,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood3.jpg",
+        "price": "$229.99"
+    },
+    {
+        "id": 14,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood4.jpg",
+        "price": "$219.99"
+    },
+    {
+        "id": 15,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/vwestwood5.jpg",
+        "price": "$209.99"
+    },
+    {
+        "id": 16,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/pandoras1.jpg",
+        "price": "$156.99"
+    },
+    {
+        "id": 17,
+        "name": "Killmmortal accessories",
+        "description": "Classic accessories.",
+        "category": "accessories",
+        "image": "/static/products_img/pandoras2.jpg",
+        "price": "$166.99"
+    }
+
+]
