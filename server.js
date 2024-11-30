@@ -3,6 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const userRouter = require('./frontend/static/js/routes/userRouter.js');
 const cartRouter = require('./frontend/static/js/routes/cartRouter.js');
+const searchRouter = require('./frontend/static/js/routes/searchRouter.js');
+const session = require('express-session');
 const app = express();
 
 
@@ -15,7 +17,15 @@ app.get("/*", (req,res) =>{
     res.sendFile(path.resolve(__dirname,"frontend", "index.html"));
 });
 
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'aRandomStringThatIsHardToGuess12345',
+    resave: false,
+    saveUninitialized: true,
+}));
+
 app.use('/user', userRouter);
+
+app.use('/search', searchRouter);
 
 app.use('/cart', cartRouter);
 

@@ -36,3 +36,15 @@ exports.addToCart = (req, res) => {
         });
     });
 };
+
+
+exports.clearCart = (req, res) => {
+    const filePath = path.join(__dirname, '../../data/cart.json');
+    fs.writeFile(filePath, JSON.stringify([], null, 2), (err) => {
+        if (err) {
+            console.error('Error clearing the cart:', err);
+            return res.status(500).send('Internal Server Error');
+        }
+        res.status(200).json({ message: 'Cart cleared successfully' });
+    });
+};

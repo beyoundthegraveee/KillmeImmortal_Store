@@ -40,6 +40,9 @@ exports.registerUser = (req, res) => {
                     console.error('Error writing to file:', err);
                     return res.status(500).send('Internal Server Error');
                 }
+
+                req.session.isAuthenticated = true;
+                req.session.username = username;
                 res.redirect('/home?message=registered');
             });
         });
@@ -73,6 +76,10 @@ exports.loginUser = (req, res) => {
             if (!isMatch) {
                 return res.status(401).send('Invalid password!');
             }
+
+            
+            req.session.isAuthenticated = true;
+            req.session.username = username;
             res.redirect('/home?message=loggedin');
         });
     });

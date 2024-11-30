@@ -8,6 +8,8 @@ import HoodiesView from "../views/HoodiesView.js";
 import BottomsView from "../views/BottomsView.js";
 import AccessoriesView from "../views/AccessoriesView.js";
 import CartView from "../views/CartView.js";
+import SearchView from '../views/SearchView.js';
+import { updateAuthUI, setAuthStatus, isUserAuthenticated } from '../js/auth.js';
 
 const navigateTo = url =>{
     history.pushState(null, null,url);
@@ -27,10 +29,28 @@ const router = async() => {
         {path: "/outerwear", view: OuterwearView },
         {path: "/bottoms", view: BottomsView},
         {path: "/accessories", view: AccessoriesView},
-        {path: "/showcart", view: CartView}
+        {path: "/showcart", view: CartView},
+        {path: "/search", view: SearchView}
     ];
 
+    window.onload = () => {
+        updateAuthUI();
+    };
+    function loginUser() {
+        setAuthStatus(true);
+        updateAuthUI();  // Обновляем UI после авторизации
+        window.location.href = '/home'; // Перенаправление после логина
+    }
+    
+    // При выходе
+    function logoutUser() {
+        setAuthStatus(false);
+        updateAuthUI();  // Обновляем UI после выхода
+        window.location.href = '/'; // Перенаправление после выхода
+    }
 
+    
+};
     const potentialMatches = routes.map(route => {
         return{
             route: route,

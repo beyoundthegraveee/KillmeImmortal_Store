@@ -1,6 +1,6 @@
 export async function getCart() {
     try {
-        const response = await fetch('./static/data/Сart.json');
+        const response = await fetch('./static/data/Cart.json');
         if (!response.ok) {
             throw new Error('Failed to load cart');
         }

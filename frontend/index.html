@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="static/css/style.css">
     <script type="module" src="static/js/routes/viewRouter.js" defer></script>
     <script type="module" src="static/js/modal.js" defer></script>
+    <script type="module" src="static/js/search.js" defer></script>
     <title>k1llmeimmortal</title>
 </head>
 <body>
@@ -25,11 +26,11 @@
             </ul>
         </nav>
 
-    <div class="search-input-container">
-        <span class="search-icon"><img src="static/img/search.svg" alt="search icon" /></span>
-        <input type="text" placeholder="Search" class="search-input" />
-        <span class="close-icon"><img src="static/img/close.svg" alt="close icon" /></span>
-    </div>
+        <div class="search-input-container" id="search-input-container">
+            <span class="search-icon"><img src="static/img/search.svg" alt="search icon" /></span>
+            <input type="text" placeholder="Search" class="search-input" id="search-input" />
+            <span class="close-icon"><img src="static/img/close.svg" alt="close icon" /></span>
+        </div>
 
 
     </header>

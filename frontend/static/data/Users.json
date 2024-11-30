@@ -58,5 +58,11 @@
     "username": "username123332",
     "email": "s2423911@pjwstk.edu.pl",
     "password": "$2b$10$z1qRH1U.KZ82fCe4/.15aOAhO.FJAc77WJeTKy9hKqY5PyIIj1TAi"
+  },
+  {
+    "id": 11,
+    "username": "kirillkurzov",
+    "email": "kk111urzau@gmail.com",
+    "password": "$2b$10$iF1zTTS5t8YR6Vl9MaeDUeVZTVn2ZIxUhQTBB5I0eU4Lmsa2.D7bC"
   }
 ]

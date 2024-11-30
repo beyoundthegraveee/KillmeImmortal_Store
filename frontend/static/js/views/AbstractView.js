@@ -65,4 +65,31 @@ export default class AbstractView {
         });
     }
 
+    showShipmentModal() {
+        const modalHtml = `
+            <div id="shipment-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Your items have been shipped!</h2>
+                    <p>Your items have been sent to your local address.</p>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        const modal = document.getElementById('shipment-modal');
+        modal.style.display = "block";
+        const closeButton = document.querySelector(".close-btn");
+        closeButton.addEventListener('click', () => {
+            modal.style.display = "none";
+            modal.remove();
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                modal.remove();
+            }
+        });
+    }
+
 }

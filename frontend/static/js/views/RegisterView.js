@@ -34,7 +34,39 @@ export default class extends AbstractView {
             </div>
         </div>
     `;
-}
+    }
 
+    addEventListeners() {
+        const form = document.getElementById("register-form");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let isValid = true;
+            const username = document.getElementById("username");
+            const usernameError = document.getElementById("username-error");
+            if (username.value.length < 8) {
+                usernameError.textContent = "Username must be at least 8 characters long";
+                usernameError.style.visibility = "visible";
+                usernameError.style.color = "red";
+                isValid = false;
+            } else {
+                usernameError.style.visibility = "hidden";
+            }
+
+            const password = document.getElementById("password");
+            const passwordError = document.getElementById("password-error");
+            if (password.value.length < 10) {
+                passwordError.textContent = "Password must be at least 10 characters long";
+                passwordError.style.visibility = "visible"; 
+                passwordError.style.color = "red";
+                isValid = false;
+            } else {
+                passwordError.style.visibility = "hidden";
+            }
+            if (isValid) {
+                form.submit();
+            }
+        });
+    }
     
 }
