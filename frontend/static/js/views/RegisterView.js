@@ -12,7 +12,7 @@ export default class extends AbstractView {
         <div class="register-bg">
             <div class="register-container">
                 <h1>Sign Up</h1>
-                <form id="register-form" action="/api/register" method="POST">
+                <form id="register-form" action="/user/register" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Create a username" required>

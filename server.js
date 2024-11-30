@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const userRouter = require('./frontend/static/js/routes/userRouter.js');
+const cartRouter = require('./frontend/static/js/routes/cartRouter.js');
 const app = express();
+
 
 
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));
@@ -13,7 +15,10 @@ app.get("/*", (req,res) =>{
     res.sendFile(path.resolve(__dirname,"frontend", "index.html"));
 });
 
-app.use('/api', userRouter);
+app.use('/user', userRouter);
+
+app.use('/cart', cartRouter);
+
 
 
 app.use(function (req, res, next) {

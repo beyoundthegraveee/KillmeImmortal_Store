@@ -27,7 +27,7 @@ const router = async() => {
         {path: "/outerwear", view: OuterwearView },
         {path: "/bottoms", view: BottomsView},
         {path: "/accessories", view: AccessoriesView},
-        {path: "/cart", view: CartView}
+        {path: "/showcart", view: CartView}
     ];
 
 
@@ -51,6 +51,10 @@ const router = async() => {
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 
+    if (typeof view.addEventListeners === "function") {
+        view.addEventListeners();
+    }
+
 };
 
 window.addEventListener("popstate", router);
@@ -59,7 +63,6 @@ window.addEventListener("popstate", router);
 document.addEventListener("DOMContentLoaded", () =>{
     const urlParams = new URLSearchParams(window.location.search);
     const message = urlParams.get('message');
-
     if (message === 'registered') {
         alert('You registered successfully!');
     } else if (message === 'loggedin') {

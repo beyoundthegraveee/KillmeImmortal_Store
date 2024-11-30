@@ -46,5 +46,17 @@
     "username": "username111",
     "email": "exp@gmail.com",
     "password": "$2b$10$vSFkztfpwgCcrL6PUc7BbOW.3wkhpW/wpde7HNyQwDO49RLBr7QQG"
+  },
+  {
+    "id": 9,
+    "username": "bogdaska1",
+    "email": "s214911@pjwstk.edu.pl",
+    "password": "$2b$10$68nYWI5nqNJ8xt8A0..u7eUUQzDxBSdfj4/Ex386WMywZebLyiLQm"
+  },
+  {
+    "id": 10,
+    "username": "username123332",
+    "email": "s2423911@pjwstk.edu.pl",
+    "password": "$2b$10$z1qRH1U.KZ82fCe4/.15aOAhO.FJAc77WJeTKy9hKqY5PyIIj1TAi"
   }
 ]

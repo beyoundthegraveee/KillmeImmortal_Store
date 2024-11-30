@@ -11,7 +11,7 @@ export default class extends AbstractView {
         <div class="login-bg">
             <div class="login-container">
                 <h1>Login</h1>
-                <form id="login-form" action="/api/login" method="POST">
+                <form id="login-form" action="/user/login" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" id="username" name="username" placeholder="Enter your username" required>
