@@ -28,6 +28,10 @@ export default class extends AbstractView {
                    <p>Product: ${productName}</p>
                     <p>Quantity: ${item.totalamount}</p>
                     <p>Price: $${item.totalprice.toFixed(2)}</p>
+                    <span class="remove-icon" data-id="${item.id}">
+                        <img src="/static/img/delete.svg" alt="Remove item" />
+                        <button class="remove-btn" data-id="${item.id}">Remove</button>
+                    </span>
                 </div>
             `;
             totalItems += item.totalamount;
@@ -74,6 +78,33 @@ export default class extends AbstractView {
                     console.log('Cart cleared successfully');
                 } catch (error) {
                     console.error('Error clearing the cart:', error);
+                }
+            });
+        }
+        if (cartItemsElement) {
+            cartItemsElement.addEventListener('click', async (event) => {
+                const target = event.target;
+                if (target.classList.contains('remove-btn') || target.closest('.remove-icon')) {
+                    const productId = target.dataset.id || target.closest('.remove-icon').dataset.id;
+    
+                    try {
+                        const response = await fetch('http://localhost:3000/cart/removeFromCart', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ productId }),
+                        });
+                        if (response.ok) {
+                            const updatedCart = await response.json();
+                            console.log('Item removed successfully');
+                            this.updateCartView(updatedCart, this.products);
+                        } else {
+                            console.error('Failed to remove product from cart');
+                        }
+                    } catch (error) {
+                        console.error('Error removing product from cart:', error);
+                    }
                 }
             });
         }

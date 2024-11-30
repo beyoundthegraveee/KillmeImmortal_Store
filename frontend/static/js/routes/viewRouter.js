@@ -9,7 +9,6 @@ import BottomsView from "../views/BottomsView.js";
 import AccessoriesView from "../views/AccessoriesView.js";
 import CartView from "../views/CartView.js";
 import SearchView from '../views/SearchView.js';
-import { updateAuthUI, setAuthStatus, isUserAuthenticated } from '../js/auth.js';
 
 const navigateTo = url =>{
     history.pushState(null, null,url);
@@ -33,24 +32,6 @@ const router = async() => {
         {path: "/search", view: SearchView}
     ];
 
-    window.onload = () => {
-        updateAuthUI();
-    };
-    function loginUser() {
-        setAuthStatus(true);
-        updateAuthUI();  // Обновляем UI после авторизации
-        window.location.href = '/home'; // Перенаправление после логина
-    }
-    
-    // При выходе
-    function logoutUser() {
-        setAuthStatus(false);
-        updateAuthUI();  // Обновляем UI после выхода
-        window.location.href = '/'; // Перенаправление после выхода
-    }
-
-    
-};
     const potentialMatches = routes.map(route => {
         return{
             route: route,

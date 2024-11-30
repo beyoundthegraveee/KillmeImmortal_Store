@@ -92,4 +92,29 @@ export default class AbstractView {
         });
     }
 
+    updateCartView(cart, products) {
+        let cartItemsHtml = '';
+        let totalItems = 0;
+        let totalPrice = 0;
+    
+        cart.forEach(item => {
+            const product = products.find(p => p.id == item.id);
+            const productName = product ? product.name : "Unknown Product";
+            cartItemsHtml += `
+                <div class="cart-item">
+                   <p>Product: ${productName}</p>
+                   <p>Quantity: ${item.totalamount}</p>
+                   <p>Price: $${item.totalprice.toFixed(2)}</p>
+                   <button class="remove-item-btn" data-id="${item.id}">Remove</button>
+                </div>
+            `;
+            totalItems += item.totalamount;
+            totalPrice += item.totalprice;
+        });
+    
+        document.getElementById('cart-items').innerHTML = cartItemsHtml;
+        document.getElementById('total-items').textContent = totalItems;
+        document.getElementById('total-price').textContent = `$${totalPrice.toFixed(2)}`;
+    }
+
 }

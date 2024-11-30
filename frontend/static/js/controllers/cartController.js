@@ -48,3 +48,33 @@ exports.clearCart = (req, res) => {
         res.status(200).json({ message: 'Cart cleared successfully' });
     });
 };
+
+exports.removeFromCart = (req, res) => {
+    const { productId } = req.body;
+    const filePath = path.join(__dirname, '../../data/cart.json');
+
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            return res.status(500).send('Internal Server Error');
+        }
+
+        let cart = [];
+        if (data) {
+            cart = JSON.parse(data);
+        }
+        const productIndex = cart.findIndex(product => product.id === productId);
+        if (productIndex !== -1) {
+            cart.splice(productIndex, 1);
+            fs.writeFile(filePath, JSON.stringify(cart, null, 2), (err) => {
+                if (err) {
+                    console.error('Error writing to file:', err);
+                    return res.status(500).send('Internal Server Error');
+                }
+                res.status(200).json(cart);
+            });
+        } else {
+            res.status(404).send('Product not found in cart');
+        }
+    });
+};
