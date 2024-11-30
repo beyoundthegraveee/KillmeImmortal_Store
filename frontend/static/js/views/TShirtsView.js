@@ -1,5 +1,6 @@
 import AbstractView from "./AbstractView.js";
 import { getProductsByCategory } from '/static/js/productService.js';
+let products = [];
 export default class extends AbstractView {
     constructor(){
         super();
@@ -7,17 +8,18 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        const products = await getProductsByCategory('t-shirts_tops');
+        products = await getProductsByCategory('t-shirts_tops');
         
         let productsHtml = '';
         products.forEach(product => {
+            const numericPrice = parseFloat(product.price.replace('$', ''));
             productsHtml += `
                 <div class="product-card">
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <p>${product.price}</p>
-                    <button>Add to Cart</button>
+                    <button class="add-to-cart" data-id="${product.id}"  data-price="${numericPrice}">Add to Cart</button>
                 </div>
             `;
         });
@@ -34,5 +36,22 @@ export default class extends AbstractView {
                 </div>
             </div>
         `;
+    }
+
+    addEventListeners() {
+        const productContainer = document.querySelector('.product-container');
+        if (productContainer) {
+            productContainer.addEventListener('click', (event) => {
+                if (event.target.matches('.add-to-cart')) {
+                    const productId = event.target.dataset.id;
+                    const productPrice = parseFloat(event.target.dataset.price);
+                    if (!isNaN(productPrice)) {
+                        this.handleAddToCart(productId, productPrice);
+                    } else {
+                        console.error('Product price is invalid:', productPrice);
+                    }
+                }
+            });
+        }
     }
 }

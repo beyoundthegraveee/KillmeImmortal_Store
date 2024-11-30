@@ -54,7 +54,6 @@ const router = async() => {
     if (typeof view.addEventListeners === "function") {
         view.addEventListeners();
     }
-
 };
 
 window.addEventListener("popstate", router);

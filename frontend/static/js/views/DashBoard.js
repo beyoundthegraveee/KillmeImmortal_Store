@@ -12,13 +12,14 @@ export default class extends AbstractView {
         let productsHtml = '';
 
         products.forEach(product => {
+            const numericPrice = parseFloat(product.price.replace('$', ''));
             productsHtml += `
                 <div class="product-card">
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <p>${product.price}</p>
-                    <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                    <button class="add-to-cart" data-id="${product.id}"  data-price="${numericPrice}">Add to Cart</button>
                 </div>
             `;
         });
@@ -44,37 +45,15 @@ export default class extends AbstractView {
                 if (event.target.matches('.add-to-cart')) {
                     const productId = event.target.dataset.id;
                     const productPrice = parseFloat(event.target.dataset.price);
-                    this.handleAddToCart(productId, productPrice);
+                    if (!isNaN(productPrice)) {
+                        this.handleAddToCart(productId, productPrice);
+                    } else {
+                        console.error('Product price is invalid:', productPrice);
+                    }
                 }
             });
         }
     }
 
-    handleAddToCart(productId, productPrice) {
-        const url = 'http://localhost:3000/cart/addToCart';
-        const data = {
-            productId: productId,
-            productPrice: productPrice,
-        };
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Product successfully added to cart:', data);
-        })
-        .catch(error => {
-            console.error('Error adding product to cart:', error);
-        });
-    }
 
 }
