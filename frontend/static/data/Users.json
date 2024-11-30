@@ -64,5 +64,11 @@
     "username": "kirillkurzov",
     "email": "kk111urzau@gmail.com",
     "password": "$2b$10$iF1zTTS5t8YR6Vl9MaeDUeVZTVn2ZIxUhQTBB5I0eU4Lmsa2.D7bC"
+  },
+  {
+    "id": 12,
+    "username": "usename123",
+    "email": "kku111rzau@gmail.com",
+    "password": "$2b$10$iYPpKVCqlD.c5Y3DfXHZCOUF5uTnvrKAKTfeJVIb30/zOizaJEHxC"
   }
 ]

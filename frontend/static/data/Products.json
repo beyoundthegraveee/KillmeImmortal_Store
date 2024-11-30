@@ -1,15 +1,15 @@
 [
     {
       "id": 1,
-      "name": "Hoddie ",
-      "description": "Comfortable hoodie.",
+      "name": "Killmmortal hoodie ",
+      "description": "Classic hoodie.",
       "category": "hoodies",
       "image": "/static/products_img/hoodie.jpg",
       "price": "$39.99"
     },
     {
       "id": 2,
-      "name": "Longsleeve",
+      "name": "Killmmortal longsleeve",
       "description": "Warm Longsleeve.",
       "category": "t-shirts_tops",
       "image": "/static/products_img/long.jpg",
@@ -84,7 +84,7 @@
         "name": "Killmmortal accessories",
         "description": "Classic accessories.",
         "category": "accessories",
-        "image": "/static/products_img/vwestwood1.jpg",
+        "image": "/static/products_img/earrings2.jpg",
         "price": "$219.99"
     },
     {
@@ -92,7 +92,7 @@
         "name": "Killmmortal accessories",
         "description": "Classic accessories.",
         "category": "accessories",
-        "image": "/static/products_img/vwestwood2.jpg",
+        "image": "/static/products_img/ring1.jpg",
         "price": "$219.99"
     },
     {
@@ -124,7 +124,7 @@
         "name": "Killmmortal accessories",
         "description": "Classic accessories.",
         "category": "accessories",
-        "image": "/static/products_img/pandoras1.jpg",
+        "image": "/static/products_img/earrings1.jpg",
         "price": "$156.99"
     },
     {
@@ -132,7 +132,7 @@
         "name": "Killmmortal accessories",
         "description": "Classic accessories.",
         "category": "accessories",
-        "image": "/static/products_img/pandoras2.jpg",
+        "image": "/static/products_img/ring2.jpg",
         "price": "$166.99"
     },
     {
@@ -140,7 +140,7 @@
         "name": "Killmmortal outerwear",
         "description": "Classic coaches.",
         "category": "outerwear",
-        "image": "/static/products_img/outerwear1.jpg",
+        "image": "/static/products_img/coach1.jpg",
         "price": "$89.99"
     },
     {
@@ -158,6 +158,38 @@
         "category": "outerwear",
         "image": "/static/products_img/outerwear3.jpg",
         "price": "$99.99"
+    },
+    {
+        "id": 21,
+        "name": "Killmmortal hoodie",
+        "description": "Classic hoodie.",
+        "category": "hoodies",
+        "image": "/static/products_img/hoodie2.jpg",
+        "price": "$41.99"
+    },
+    {
+        "id": 22,
+        "name": "Killmmortal hoodie",
+        "description": "Classic hoodie.",
+        "category": "hoodies",
+        "image": "/static/products_img/hoodie3.jpg",
+        "price": "$39.99"
+    },
+    {
+        "id": 23,
+        "name": "Killmmortal hoodie",
+        "description": "Classic hoodie.",
+        "category": "hoodies",
+        "image": "/static/products_img/hoodie4.jpg",
+        "price": "$49.99"
+    },
+    {
+        "id": 24,
+        "name": "Killmmortal outerwear",
+        "description": "Classic coaches.",
+        "category": "outerwear",
+        "image": "/static/products_img/coach2.jpg",
+        "price": "$92.99"
     }
 
 ]
