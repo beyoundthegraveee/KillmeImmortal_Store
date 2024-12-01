@@ -543,7 +543,7 @@ footer p {
 .remove-icon {
     display: flex;
     align-items: center;
-    gap: 8px; /* Расстояние между SVG и кнопкой */
+    gap: 8px;
     cursor: pointer;
 }
 
@@ -559,7 +559,7 @@ footer p {
 }
 
 .remove-btn {
-    background-color: #f44336; /* Красный цвет кнопки */
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 4px;
@@ -570,5 +570,5 @@ footer p {
 }
 
 .remove-btn:hover {
-    background-color: #d32f2f; /* Темнее при наведении */
+    background-color: #d32f2f;
 }
